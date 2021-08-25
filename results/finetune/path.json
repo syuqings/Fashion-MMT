@@ -1,0 +1,30 @@
+{
+  "output_dir": "../results/finetune/",
+  "pretrain_task": ["mmt"],
+  "eval_task": ["mmt"],
+  "word2int_file": "../results/pretrain/word2int.json",
+  "int2word_file": "../results/pretrain/int2word.json",
+  "anno_file": "../annotation/anno_clean.json",
+  "attr2int_file": "../annotation/attr2int.json",
+  "ft_root": "../features/resnet101.finetune",
+  "sim_img": {
+    "tst": "../annotation/tst_sim_img.json",
+    "val": "../annotation/val_sim_img.json",
+    "trn": "../annotation/trn_sim_img.json"
+  },
+  "src_txt": {
+    "tst": "../annotation/tst.en.txt",
+    "val": "../annotation/val.en.txt",
+    "trn": "../annotation/trn.en.txt"
+  },
+  "tgt_txt": {
+    "tst": "../annotation/tst.zh.txt",
+    "val": "../annotation/val.zh.txt",
+    "trn": "../annotation/trn.zh.txt"
+  },
+  "name_file": {
+    "tst": "../public_split/tst_ids.npy",
+    "val": "../public_split/val_ids.npy",
+    "trn": "../public_split/trn_ids.npy"
+  }
+}
