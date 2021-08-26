@@ -1,5 +1,5 @@
 # Product-oriented Machine Translation with Cross-modal Cross-lingual Pre-training
-This repository contains the Fashion-MMT dataset and PyTorch implementation of our paper [Product-oriented Machine Translation with Cross-modal Cross-lingual Pre-training]() (ACMMM 2021 Oral).
+This repository contains the Fashion-MMT dataset and PyTorch implementation of our paper [Product-oriented Machine Translation with Cross-modal Cross-lingual Pre-training](https://arxiv.org/pdf/2108.11119.pdf) (ACMMM 2021 Oral).
 
 ## Requirements
 - Python 3.6
