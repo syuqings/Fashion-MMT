@@ -56,7 +56,7 @@ class TransModel(framework.modelbase.ModelBase):
     src_mask, trg_mask = self.create_masks(src, trg, task)
     img_ft = batch_data['img_ft'].cuda()
     img_len = batch_data['ft_len'].cuda()
-    img_mask = self.img_mask(img_len).unsqueeze(1)
+    img_mask = self.img_mask(img_len, max_len=img_ft.size(1)).unsqueeze(1)
     outputs = self.submods[DECODER](src, trg, img_ft, src_mask, trg_mask, img_mask, task=task)
 
     if task == 'itm':
@@ -84,7 +84,7 @@ class TransModel(framework.modelbase.ModelBase):
         src_mask, trg_mask = self.create_masks(src, trg, task)
         img_ft = batch_data['img_ft'].cuda()
         img_len = batch_data['ft_len'].cuda()
-        img_mask = self.img_mask(img_len).unsqueeze(1)
+        img_mask = self.img_mask(img_len, max_len=img_ft.size(1)).unsqueeze(1)
 
         if task == 'mmt':
           if self.submods[DECODER].config.decoding == 'greedy':
